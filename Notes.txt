@@ -1,0 +1,81 @@
+Class 1 -
+
+Mobile testing - only UI (front-end) is change, rest layers will be same for testing.
+companies prefer virtual devices over real  devices because they are dedicated for testing activities.
+we will execute our scripts on andriod phones because apple doesn't allow to create iphone devices using windows.
+
+open the android studio -
+file = new project > empty activity > phone and tablet > next > finish.
+
+we have added the android sdk path in user variables
+and tools, platform tools and emulator path in path extended variable
+(in case if you don't have tool folder in sdk, go to android studio> tools>sdk manager>hide obsolete package>install it)
+
+
+device manager - it allows user to create emulator/simulator for testing purpose
+
+to check, if android sdk is installed or not - type adb in terminal
+adb devices - to check the list and id of the devices which are active
+
+
+.apk is the extension for android
+.app/.asi is the extension for ios
+
+
+here, we get .apk/.app from the developers and we install it in our simulators instead of just url because it is an app
+
+Class 2 -
+
+we have added 5 dependencies in our framework -
+2 cucumber-java-junit
+2 appium and selenium
+1 apache poi ooxml
+
+do we need main folder?
+no
+
+under test - we have 2 branches
+java and resources
+
+we have created utils, steps, runners and pages packages in java
+we have created features and config directory in resources
+
+we have written a scenario, created step definition and
+passed the path of it in runner class
+
+before running the script, make sure
+device is open
+appium server should be running
+correct capabilities should be passed
+
+one login scenario for successful login
+setup the method to launch the android device and the application in it
+created the basic skeleton of the framework
+
+
+ui automator viewer
+it is available in android sdk path
+it is a batch file having .bat extension
+
+we obtain the screenshot using ui automator viewer
+we rely on resource id, content desc, text, index value for mobile elements
+
+
+class 3 -
+recap -
+
+ui automator viewer for identifying the mobile elements in the application
+common locators in appium - resource id, content desc, index, text etc.
+
+desired capabilities and appium url address
+
+apk and device related information - device version, platform, name, app package, app activity etc
+127.0.0.1:4723/wd/hub
+
+appium driver we use instead of web driver because we are working with mobile
+
+- valid login scenario in swaglabs application
+- apk is available in our project itself
+- in feature file, we wrote a scenario for login
+- in steps def, we kept steps for the scenario
+- in pages package, we have all the object repository and methods
